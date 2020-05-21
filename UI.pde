@@ -344,7 +344,7 @@ class UI {
     noStroke();
     fill(7, 11, 18, 100);
     rectMode(CENTER);
-    rect(width/2, height/2, width*0.75, height*0.20);
+    rect(width/2, height*0.40, width*0.75, height*0.20);
     
     textAlign(CENTER);
     fill(255, 255, 255, 200);
@@ -352,7 +352,22 @@ class UI {
     int textSize = (height > width) ? (int)(width*0.10) : (int)(height*0.10);
     
     textSize(textSize);
-    text("Tap to restart", width/2, height/2 + textSize/4);
+    text("Tap to restart", width/2, height*0.40 + textSize/4);
+    
+    fill(7, 11, 18, 100);
+    rectMode(CENTER);
+    rect(width/2, height*0.60, width*0.75, height*0.20);
+    
+    textAlign(CENTER);
+    fill(255, 255, 255, 200);
+    
+    textSize = (height > width) ? (int)(width*0.10) : (int)(height*0.10);
+    
+    textSize(textSize);
+    
+    String time = (float)(start - start_s)/1000 + "s";
+    
+    text("Time spent " + time, width/2, height*0.60);
   }
   
   boolean clickedOnMenu(int x, int y) {
